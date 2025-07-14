@@ -51,7 +51,8 @@ h3 {
 }
 
 .hero h1,
-.hero h2 {
+.hero h2,
+footer h2 {
   text-align: center;
 }
 
@@ -76,6 +77,10 @@ h3 {
   padding: 0 50px 50px;
 }
 
+.work h2 {
+  margin-bottom: 10px;
+}
+
 .work-collection {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -83,9 +88,7 @@ h3 {
 }
 
 .work article {
-  /* border: 0.5px solid #edf2f4;
-  border-radius: 0 0 5px 5px;*/
-  box-shadow: 1px 1px 5px 2px #edf2f4; 
+  box-shadow: 1px 1px 5px 2px #edf2f4;
 }
 
 .project-image {
@@ -96,7 +99,8 @@ h3 {
 }
 
 .project-details {
-  padding: 10px 15px 30px;border: 0.5px solid #edf2f4;
+  padding: 10px 15px 30px;
+  border: 0.5px solid #edf2f4;
   border-radius: 0 0 5px 5px;
 }
 
@@ -119,13 +123,40 @@ footer {
   background: linear-gradient(45deg, #0077b6, #023e8a, #0096c7);
 }
 
+.contact-text {
+  padding: 30px 20px 60px;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.address {
+  margin-bottom: 20px;
+}
+
+.phone {
+  margin-bottom: 5px;
+}
+
+.email {
+  margin-bottom: 20px;
+}
+
+.phone-div iconify-icon,
+.email-div iconify-icon {
+  display: none;
+}
+
 /* For tablet and desktop */
 @media (min-width: 600px) {
   .hero h2 {
     text-align: left;
   }
 
-  .icons {
+  .hero .icons {
     text-align: right;
     margin-right: 10px;
   }
@@ -136,5 +167,31 @@ footer {
 
   .about-me {
     margin-left: 20px;
+  }
+
+  footer,
+  .phone-div,
+  .email-div {
+    display: flex;
+  }
+
+  .phone-div iconify-icon,
+  .email-div iconify-icon {
+    display: initial;
+  }
+
+  .phone-div iconify-icon,
+  .email-div iconify-icon {
+    margin-right: 5px;
+  }
+
+  .contact-text h2,
+  .contact-text .icons {
+    text-align: left;
+  }
+
+  .contact-image {
+    padding: 50px;
+    align-self: center;
   }
 }
